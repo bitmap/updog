@@ -1,0 +1,14 @@
+{
+  "name": "upload",
+  "version": "1.0.0",
+  "description": "simple image upload",
+  "main": "server.js",
+  "dependencies": {
+    "formidable": "~1.0.14"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Caleb Branson"
+}
