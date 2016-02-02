@@ -1,10 +1,10 @@
 {
-  "name": "upload",
+  "name": "updog",
   "version": "1.0.0",
   "description": "simple image upload",
   "main": "server.js",
   "dependencies": {
-    "formidable": "~1.0.14"
+    "formidable": "^1.0.17"
   },
   "devDependencies": {},
   "scripts": {

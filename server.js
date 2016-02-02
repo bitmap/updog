@@ -7,12 +7,12 @@ http.createServer(function(request, response) {
 
     var form = new formidable.IncomingForm();
 
-    form.uploadDir = __dirname + '/uploaded';
+    form.uploadDir = __dirname + '/uploads';
     form.keepExtensions = true;
 
     form.on('file', function(field, file) {
       fs.rename(file.path, form.uploadDir + "/" + file.name);
-    })
+    });
 
     form.parse(request, function(err, fields, files) {
       response.writeHead(200, {'content-type': 'text/html'});
@@ -24,7 +24,7 @@ http.createServer(function(request, response) {
       if(!part.filename || part.filename.match(/\.(jpg|jpeg|png|gif)$/i)) {
         this.handlePart(part);
       }
-    }
+    };
 
     return;
   }
@@ -35,4 +35,4 @@ http.createServer(function(request, response) {
     response.end();
   });
 
-}).listen(138);
+}).listen(3000);
